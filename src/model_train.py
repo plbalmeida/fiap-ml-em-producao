@@ -27,10 +27,10 @@ def create_pipeline_and_search(target, lags, window_size):
 
     param_grid = {
         "model__base_estimator__n_estimators": [100, 200, 300],
-        # "model__base_estimator__learning_rate": [0.01, 0.05, 0.1],
-        # "model__base_estimator__max_depth": [3, 5, 8],
-        # "model__base_estimator__min_samples_split": [2, 5, 10],
-        # "model__base_estimator__min_samples_leaf": [1, 2, 4]
+        "model__base_estimator__learning_rate": [0.01, 0.05, 0.1],
+        "model__base_estimator__max_depth": [3, 5, 8],
+        "model__base_estimator__min_samples_split": [2, 5, 10],
+        "model__base_estimator__min_samples_leaf": [1, 2, 4]
     }
 
     tscv = TimeSeriesSplit(n_splits=6)
